@@ -1,11 +1,11 @@
-import { Button, type ButtonProps } from '@/components/ui/button'
+import { Button, type ButtonProps } from "@/components/ui/button";
 
 interface Props extends ButtonProps {
-  href?: string
+  href?: string;
 }
 
 export const SidebarLink = (props: Props) => {
-  const { children, href, ...buttonProps } = props
+  const { children, href, ...buttonProps } = props;
   return (
     <Button
       variant="ghost"
@@ -14,16 +14,16 @@ export const SidebarLink = (props: Props) => {
       gap="3"
       color="fg.muted"
       _hover={{
-        bg: 'colorPalette.subtle',
-        color: 'colorPalette.fg',
+        bg: "red.500",
+        color: "white",
       }}
       _currentPage={{
-        color: 'colorPalette.fg',
+        color: "red.500",
       }}
       asChild
       {...buttonProps}
     >
       <a href={href}>{children}</a>
     </Button>
-  )
-}
+  );
+};
